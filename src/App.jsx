@@ -1,10 +1,13 @@
-
-import ProductDetail from './components/ProductDetail'
+import Header from './components/Header';
+import ProductDetail from './components/ProductDetail';
 
 const App = () => {
   return (
-    <ProductDetail />
-  )
-}
+    <>
+      <Header />
+      <ProductDetail />
+    </>
+  );
+};
 
-export default App
+export default App;
