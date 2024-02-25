@@ -1,10 +1,13 @@
-
-import ProductDetail from './components/ProductDetail'
+import Footer from "./components/Footer";
+import ProductDetail from "./components/ProductDetail";
 
 const App = () => {
   return (
-    <ProductDetail />
-  )
-}
+    <>
+      <ProductDetail />
+      <Footer />
+    </>
+  );
+};
 
-export default App
+export default App;

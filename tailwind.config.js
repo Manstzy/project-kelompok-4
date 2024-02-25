@@ -2,22 +2,24 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      screens: {
-        miniPhone: "300px",
-        phone: "410px",
-        medium: "520px",
-        tablet: "640px",
-        // => @media (min-width: 640px) { ... }
-        large: "850px",
+    screens: {
+      miniPhone: "300px",
+      phone: "390px",
 
-        laptop: "1024px",
-        // => @media (min-width: 1024px) { ... }
+      miniMedium: "440px",
+      medium: "514px",
 
-        desktop: "1280px",
-        // => @media (min-width: 1280px) { ... }
-      },
+      miniLarge: "640px",
+      // => @media (min-width: 640px) { ... }
+      large: "842px",
+
+      laptop: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: "1280px",
+      // => @media (min-width: 1280px) { ... }
     },
+    extend: {},
   },
   plugins: [],
 };
