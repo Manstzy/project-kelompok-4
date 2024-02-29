@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
 .quantity::-webkit-inner-spin-button,
 .quantity::-webkit-outer-spin-button {
   -webkit-appearance: none;

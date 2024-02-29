@@ -28,7 +28,7 @@ const ProductDetail = () => {
     }
   };
   return (
-    <div className="px-4 py-12 large:flex large:gap-10 desktop:gap-8 desktop:px-28 font-[sans-serif]">
+    <div className="px-4 py-10 large:flex large:gap-10 desktop:gap-8 desktop:px-8 font-[sans-serif]">
       <div className="grid grid-cols-4 gap-4 large:max-w-[450px] desktop:max-w-[480px]">
         <img
           className="col-span-4"
