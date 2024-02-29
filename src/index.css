@@ -7,3 +7,9 @@
   -webkit-appearance: none;
   margin: 0;
 }
+
+@layer components{
+  .link-hover {
+    @apply after:content-[''] after:block after:pb-2 after:border-b-4 after:border-[#ED1C24] after:scale-x-0 after:duration-200 hover:after:scale-x-100 hover:text-[#ED1C24]
+  }
+}
