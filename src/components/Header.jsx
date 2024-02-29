@@ -19,7 +19,7 @@ const Header = () => {
   const handleMenuCls = () => {
     setMenu(false);
   };
-
+  
   return (
     <>
       <header className=" large:hidden sticky">
@@ -32,7 +32,7 @@ const Header = () => {
           </div>
           <div
             className={clsx(
-              'fixed h-full w-screen bg-black/50 top-0 right-0 -translate-x-full transition-transform',
+              'fixed h-full w-screen bg-black/50 top-0 right-0 -translate-x-full transition-transform z-[999999]',
               menu && 'translate-x-0'
             )}
           >
