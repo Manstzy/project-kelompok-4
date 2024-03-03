@@ -1,13 +1,13 @@
-import LandingPageTemplate from "../components/templates/LandingPageTemplate"
+import LandingPageTemplate from "../components/templates/LandingPageTemplate";
+import SidebarMenu from "../components/sidebar";
 
 const ListProduct = () => {
   return (
     <LandingPageTemplate>
-      <a href="/list-product/detail">
-        INI HALAMAN LIST PRODUCT
-        </a>
+      <SidebarMenu />
+      <a href="/list-product/detail">INI HALAMAN LIST PRODUCT</a>
     </LandingPageTemplate>
-  )
-}
+  );
+};
 
-export default ListProduct
+export default ListProduct;

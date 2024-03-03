@@ -13,8 +13,120 @@
   margin: 0;
 }
 
-@layer components{
+@layer components {
   .link-hover {
-    @apply after:content-[''] after:block after:pb-2 after:border-b-4 after:border-[#ED1C24] after:scale-x-0 after:duration-200 hover:after:scale-x-100 hover:text-[#ED1C24]
+    @apply after:content-[''] after:block after:pb-2 after:border-b-4 after:border-[#ED1C24] after:scale-x-0 after:duration-200 hover:after:scale-x-100 hover:text-[#ED1C24];
   }
+}
+
+* {
+  /* border: none; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  /* position: absolute; */
+  /* margin-top: 250px;
+  margin-left: 20%; */
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 1000px;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.05em;
+  text-transform: uppercase;
+}
+
+.redlist {
+  background: #ed1c24;
+  display: block;
+  height: 3px;
+  margin: 1em 0px;
+  max-width: 30px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.sprei,
+.fashion-anak,
+.fashion-pria,
+.produk-lainnya,
+.sarung,
+.baju-muslim,
+.songkok,
+.subaiyah,
+.kain-batik,
+.grosir {
+  line-height: 30px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-top: #e1e1e1 1px solid;
+  align-items: center;
+}
+
+.sprei {
+  border-top: none;
+}
+
+.sprei-submenu {
+  display: block;
+}
+
+.sprei-submenu,
+.fashion-anak-submenu,
+.fashion-pria-submenu,
+.sarung-submenu,
+.baju-muslm-submenu,
+.songkok-submenu,
+.subaiyah-submenu,
+.kain-batik-submenu,
+.grosir-submenu {
+  display: block;
+  border-top: none;
+  border-left: #e1e1e1 1px solid !important;
+  font-size: 14px;
+}
+
+.sprei-submenu,
+.fashion-anak-submenu,
+.fashion-pria-submenu,
+.subaiyah-submenu,
+.kain-batik-submenu {
+  padding: 5%;
+  padding-bottom: 3%;
+}
+
+.sarung-submenu div,
+.baju-muslm-submenu div,
+.songkok-submenu div,
+.grosir-submenu div {
+  margin: 3%;
+}
+
+/* .feather {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+} */
+
+button {
+  position: absolute;
+  left: 200px;
+  transform: translateY(20%);
 }
