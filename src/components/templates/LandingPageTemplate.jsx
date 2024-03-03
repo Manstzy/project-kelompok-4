@@ -9,9 +9,9 @@ const LandingPageTemplate = ({children}) => {
     <div>
       {pathname === ('/') && <div className="bg-[#E2E2E2] m-0 p-0 w-full h-full"></div>}
       <Header/>
-      <div className=" max-w-[1060px] m-auto">
+      <main className=" max-w-[1060px] mx-auto">
         {children}
-      </div>
+      </main>
       <Footer/>
     </div>
   )

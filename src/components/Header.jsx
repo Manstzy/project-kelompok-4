@@ -19,9 +19,10 @@ const Header = () => {
   const handleMenuCls = () => {
     setMenu(false);
   };
-  
+
   return (
     <>
+      {/* MOBILE HEADER START */}
       <header className=" large:hidden sticky">
         <strong className=" flex justify-center text-xs tracking-wider h-8 items-center">
           ADD ANYTHING HERE OR JUST REMOVE IT...
@@ -108,8 +109,13 @@ const Header = () => {
           </div>
         </nav>
       </header>
+      {/* MOBILE HEADER END */}
+
+      {/* DESKTOP HEADER START */}
       <header className=" hidden large:block sticky top-0">
         <nav className=" px-4">
+          
+          {/* NAV TOP START */}
           <div className="nav___top flex justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
             <ul className="flex divide-x items-center">
               <li className="flex mr-3 hover:text-[hsla(0,0%,7%,.85)]">
@@ -157,6 +163,9 @@ const Header = () => {
               </li>
             </ul>
           </div>
+          {/* NAV TOP END */}
+          
+          {/* NAV MID START */}
           <div className="nav___mid grid grid-cols-3 items-center justify-end bg-white bg-opacity-90">
             <div></div>
             <a href="" className="flex justify-center">
@@ -180,57 +189,63 @@ const Header = () => {
               </button>
             </form>
           </div>
+          {/* NAV MID END */}
+
+          {/* NAV BOTTOM START */}
           <div className="nav___bottom font-bold text-sm tracking-wide py-3 bg-white bg-opacity-100">
             <ul className="flex flex-row justify-center flex-wrap gap-4  ">
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   SARUNG
                 </a>
               </li>
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   BAJU MUSLIM
                 </a>
               </li>
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   SONGKOK
                 </a>
               </li>
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   SUBAIYAH
                 </a>
               </li>
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   KAIN BATIK
                 </a>
               </li>
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   SPREI
                 </a>
               </li>
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   KAIN GROSIR
                 </a>
               </li>
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   PRODUK LAINNYA
                 </a>
               </li>
               <li>
-                <a href="" className="link-hover">
+                <a href="/list-product" className="link-hover">
                   DROP SHIPPER/RESELLLER
                 </a>
               </li>
             </ul>
           </div>
+          {/* NAV BOTTOM END */}
+          
         </nav>
       </header>
+      {/* DESKTOP HEADER END */}
     </>
   );
 };

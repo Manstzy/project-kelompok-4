@@ -3,7 +3,9 @@ import LandingPageTemplate from "../components/templates/LandingPageTemplate"
 const ListProduct = () => {
   return (
     <LandingPageTemplate>
-      INI HALAMAN LIST PRODUCT
+      <a href="/list-product/detail">
+        INI HALAMAN LIST PRODUCT
+        </a>
     </LandingPageTemplate>
   )
 }

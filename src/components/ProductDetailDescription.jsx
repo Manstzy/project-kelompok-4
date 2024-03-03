@@ -6,12 +6,10 @@ const ProductDetailDescription = () => {
 
   const handleDesc = () => {
     setChangeTab(false);
-    console.log(changeTab);
   };
 
   const handleInfo = () => {
     setChangeTab(true);
-    console.log(changeTab);
   };
 
   return (
