@@ -14,6 +14,7 @@ const Header = () => {
 
   const handleMenu = () => {
     setMenu(true);
+    console.log(menu);
   };
 
   const handleMenuCls = () => {
@@ -23,7 +24,7 @@ const Header = () => {
   return (
     <>
       {/* MOBILE HEADER START */}
-      <header className=" large:hidden sticky">
+      <header className=" flex flex-wrap large:hidden sticky">
         <strong className=" flex justify-center text-xs tracking-wider h-8 items-center">
           ADD ANYTHING HERE OR JUST REMOVE IT...
         </strong>
@@ -32,16 +33,17 @@ const Header = () => {
             <IoMenu className="text-3xl" />
           </div>
           <div
-            className={clsx(
-              'fixed h-full w-screen bg-black/50 top-0 right-0 -translate-x-full transition-transform z-[999999]',
-              menu && 'translate-x-0'
-            )}
+            className={
+              menu == false
+                ? 'fixed h-full w-screen bg-black/50 top-0 right-0 hidden -translate-x-full transition-transform'
+                : ' fixed h-full w-screen bg-black/50 top-0 right-0 block transition-transform translate-x-0'
+            }
           >
             <button className="right-0 absolute" onClick={handleMenuCls}>
               <IoClose className="text-white opacity-50 hover:opacity-100 text-4xl" />
             </button>
             <div className="flex flex-col justify-start h-full max-w-72 bg-white left-4 top-0 absolute p-8 gap-5 overflow-y-scroll">
-              <div>
+              <div className='w-full'>
                 <form
                   action="search"
                   className="flex justify-end border-[1px] h-8 items-center rounded-full px-3 w-full justify-self-end bg-[rgba(0,0,0,.03)] text-sm"
@@ -98,12 +100,13 @@ const Header = () => {
               </div>
             </div>
           </div>
-
-          <img
-            src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
-            alt="sarung-indonesia-logo"
-            className="w-[300px] h-[60px] cursor-pointer"
-          />
+          <a href="" className='flex justify-center items-center'>
+            <img
+              src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
+              alt="sarung-indonesia-logo"
+              className="w-1/2 h-auto"
+            />
+          </a>
           <div className="cart">
             <BsCart className="text-3xl text-[#ED1C24] cursor-pointer" />
           </div>
@@ -114,7 +117,6 @@ const Header = () => {
       {/* DESKTOP HEADER START */}
       <header className=" hidden large:block sticky top-0">
         <nav className=" px-4">
-          
           {/* NAV TOP START */}
           <div className="nav___top flex justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
             <ul className="flex divide-x items-center">
@@ -164,7 +166,7 @@ const Header = () => {
             </ul>
           </div>
           {/* NAV TOP END */}
-          
+
           {/* NAV MID START */}
           <div className="nav___mid grid grid-cols-3 items-center justify-end bg-white bg-opacity-90">
             <div></div>
@@ -242,7 +244,6 @@ const Header = () => {
             </ul>
           </div>
           {/* NAV BOTTOM END */}
-          
         </nav>
       </header>
       {/* DESKTOP HEADER END */}
