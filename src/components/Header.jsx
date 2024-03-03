@@ -59,31 +59,31 @@ const Header = () => {
               <div className=" text-grey-thin font-bold text-sm">
                 <ul className="flex flex-col gap-4 text-wrap">
                   <li>
-                    <a href="">SARUNG</a>
+                    <a href="/list-product">SARUNG</a>
                   </li>
                   <li>
-                    <a href="">BAJU MUSLIM</a>
+                    <a href="/list-product">BAJU MUSLIM</a>
                   </li>
                   <li>
-                    <a href="">SONGKOK</a>
+                    <a href="/list-product">SONGKOK</a>
                   </li>
                   <li>
-                    <a href="">SUBAIYAH</a>
+                    <a href="/list-product">SUBAIYAH</a>
                   </li>
                   <li>
-                    <a href="">KAIN BATIK</a>
+                    <a href="/list-product">KAIN BATIK</a>
                   </li>
                   <li>
-                    <a href="">SPREI</a>
+                    <a href="/list-product">SPREI</a>
                   </li>
                   <li>
-                    <a href="">GROSIR</a>
+                    <a href="/list-product">GROSIR</a>
                   </li>
                   <li>
-                    <a href="">PRODUK LAINNYA</a>
+                    <a href="/list-product">PRODUK LAINNYA</a>
                   </li>
                   <li>
-                    <a href="">DROPSHIPPER/RESELLER</a>
+                    <a href="/list-product">DROPSHIPPER/RESELLER</a>
                   </li>
                   <li>
                     <a href="">MASUK</a>
