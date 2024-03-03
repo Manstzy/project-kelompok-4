@@ -1,21 +1,19 @@
 import { useState } from 'react';
 import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
-export const ProductDetailDescription = () => {
+const ProductDetailDescription = () => {
   const [changeTab, setChangeTab] = useState(false);
 
   const handleDesc = () => {
     setChangeTab(false);
-    console.log(changeTab);
   };
 
   const handleInfo = () => {
     setChangeTab(true);
-    console.log(changeTab);
   };
 
   return (
-    <div className="max-w-[1060px] m-auto py-8 px-4">
+    <div className=" pb-8">
       <nav className="flex justify-center gap-4 py-3 font-semibold text-grey-thin">
         <div className="cursor-pointer hover:text-black" onClick={handleDesc}>
           DESKRIPSI
@@ -132,3 +130,5 @@ export const ProductDetailDescription = () => {
     </div>
   );
 };
+
+export default ProductDetailDescription
