@@ -5,6 +5,7 @@ const Sidebar = () => {
   const [hidden1, setHidden1] = useState(false);
   const [hidden2, setHidden2] = useState(false);
   const [hidden3, setHidden3] = useState(false);
+
   const hiddenShow1 = (e) => {
     e.preventDefault();
     setHidden1(!hidden1);
