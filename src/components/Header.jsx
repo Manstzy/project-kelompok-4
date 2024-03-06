@@ -100,7 +100,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <a href="" className='flex justify-center items-center'>
+          <a href="/" className='flex justify-center items-center'>
             <img
               src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
               alt="sarung-indonesia-logo"
@@ -170,7 +170,7 @@ const Header = () => {
           {/* NAV MID START */}
           <div className="nav___mid grid grid-cols-3 items-center justify-end bg-white bg-opacity-90">
             <div></div>
-            <a href="" className="flex justify-center">
+            <a href="/" className="flex justify-center">
               <img
                 src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
                 alt=""

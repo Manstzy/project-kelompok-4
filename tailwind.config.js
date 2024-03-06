@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -23,6 +24,10 @@ export default {
       colors: {
         'grey-thin': '#666666D9',
       },
+      backgroundImage: {
+        'banner1': "url('https://sarungindonesia.co.id/wp-content/uploads/2020/06/BACK1.jpg')",
+        'banner2': "url('https://sarungindonesia.co.id/wp-content/uploads/2020/06/ATLAS-05-SUPERCAR-1301x800.jpg')"
+      }
     },
     // plugins: [],
   },
