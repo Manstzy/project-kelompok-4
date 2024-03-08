@@ -5,13 +5,18 @@ import {
   BsHeartFill,
 } from 'react-icons/bs';
 import { IoClose, IoMenu, IoSearch } from 'react-icons/io5';
-import { FaRegClock } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaRegClock,
+  FaTwitter,
+} from 'react-icons/fa';
 import { useState } from 'react';
-import LoginModal from '../components/organisms/LoginModal'
+import LoginModal from '../components/organisms/LoginModal';
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
-  const [isModalShow, setIsModalShow]=useState(false)
+  const [isModalShow, setIsModalShow] = useState(false);
   // const [loginMenu, setLoginMenu]= useState(false)
 
   // const handleLoginMenu =() => {
@@ -27,10 +32,16 @@ const Header = () => {
     setMenu(false);
   };
 
+  {
+    menu == true
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'visible');
+  }
+
   return (
     <>
       {/* MOBILE HEADER START */}
-      <header className=" flex flex-wrap justify-center large:hidden sticky z-10">
+      <header className=" flex flex-wrap justify-center large:hidden sticky z-20">
         <strong className=" flex justify-center text-xs tracking-wider h-8 items-center">
           ADD ANYTHING HERE OR JUST REMOVE IT...
         </strong>
@@ -48,8 +59,8 @@ const Header = () => {
             <button className="right-0 absolute" onClick={handleMenuCls}>
               <IoClose className="text-white opacity-50 hover:opacity-100 text-4xl" />
             </button>
-            <div className="flex flex-col justify-start h-full max-w-72 bg-white left-4 top-0 absolute p-8 gap-5 overflow-y-scroll">
-              <div className='w-full'>
+            <div className="flex flex-col justify-start h-full max-w-72 bg-white left-0 top-0 absolute p-8 gap-5 overflow-y-scroll">
+              <div className="w-full">
                 <form
                   action="search"
                   className="flex justify-end border-[1px] h-8 items-center rounded-full px-3 w-full justify-self-end bg-[rgba(0,0,0,.03)] text-sm"
@@ -67,46 +78,85 @@ const Header = () => {
               <div className=" text-grey-thin font-bold text-sm">
                 <ul className="flex flex-col gap-4 text-wrap">
                   <li>
-                    <a href="/list-product">SARUNG</a>
+                    <span>
+                      <a href="/list-product">SARUNG</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/list-product">BAJU MUSLIM</a>
+                    <span>
+                      <a href="/list-product">BAJU MUSLIM</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/list-product">SONGKOK</a>
+                    <span>
+                      <a href="/list-product">SONGKOK</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/list-product">SUBAIYAH</a>
+                    <span>
+                      <a href="/list-product">SUBAIYAH</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/list-product">KAIN BATIK</a>
+                    <span>
+                      <a href="/list-product">KAIN BATIK</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/list-product">SPREI</a>
+                    <span>
+                      <a href="/list-product">SPREI</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/list-product">GROSIR</a>
+                    <span>
+                      <a href="/list-product">GROSIR</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/list-product">PRODUK LAINNYA</a>
+                    <span>
+                      <a href="/list-product">PRODUK LAINNYA</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/list-product">DROPSHIPPER/RESELLER</a>
+                    <span>
+                      <a href="/list-product">DROPSHIPPER/RESELLER</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="/my-account">MASUK</a>
+                    <span>
+                      <a href="/my-account"> MASUK</a>
+                    </span>
                   </li>
                   <li>
-                    <a href="">NEWSLETTER</a>
+                    <span>
+                      <a href="" className="flex items-center gap-2">
+                        {' '}
+                        <BsEnvelope className="text-xl" />
+                        NEWSLETTER
+                      </a>
+                    </span>
                   </li>
                   <li>
-                    <a href="">LOGO FB IG TWITTER EMAIL</a>
+                    <span className="flex gap-2">
+                      <a href="">
+                        <FaFacebookF className="text-xl" />
+                      </a>
+                      <a href="">
+                        <FaInstagram className="text-xl" />
+                      </a>
+                      <a href="">
+                        <FaTwitter className="text-xl" />
+                      </a>
+                      <a href="">
+                        <BsEnvelope className="text-xl" />
+                      </a>
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <a href="/" className='flex justify-center items-center'>
+          <a href="/" className="flex justify-center items-center">
             <img
               src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
               alt="sarung-indonesia-logo"
@@ -121,7 +171,7 @@ const Header = () => {
       {/* MOBILE HEADER END */}
 
       {/* DESKTOP HEADER START */}
-      <header className=" hidden large:block sticky top-0 z-10">
+      <header className=" hidden large:block sticky top-0 z-20">
         <nav className=" px-4">
           {/* NAV TOP START */}
           <div className="nav___top flex justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
@@ -150,8 +200,11 @@ const Header = () => {
               </li>
             </ul>
             <ul className="flex divide-x items-center">
-              <li className=" mr-3 hover:text-[hsla(0,0%,7%,.85)] cursor-pointer" onClick={()=> setIsModalShow(true)}>
-                  <span>Masuk / Daftar</span>
+              <li
+                className=" mr-3 hover:text-[hsla(0,0%,7%,.85)] cursor-pointer"
+                onClick={() => setIsModalShow(true)}
+              >
+                <span>Masuk / Daftar</span>
               </li>
               <li className=" px-3 hover:text-[hsla(0,0%,7%,.85)]">
                 <a href="" className="flex items-center gap-2">
@@ -253,11 +306,11 @@ const Header = () => {
       {/* DESKTOP HEADER END */}
 
       {/* LOGIN MODAL START */}
-      {
-        isModalShow&&<LoginModal setIsModalShow={()=> setIsModalShow(false)}/>
-      }
+      {isModalShow && (
+        <LoginModal setIsModalShow={() => setIsModalShow(false)} />
+      )}
       {/* LOGIN MODAL END */}
-      </>
+    </>
   );
 };
 
