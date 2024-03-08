@@ -7,10 +7,16 @@ import {
 import { IoClose, IoMenu, IoSearch } from 'react-icons/io5';
 import { FaRegClock } from 'react-icons/fa';
 import { useState } from 'react';
-import clsx from 'clsx';
+import LoginModal from '../components/organisms/LoginModal'
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [isModalShow, setIsModalShow]=useState(false)
+  // const [loginMenu, setLoginMenu]= useState(false)
+
+  // const handleLoginMenu =() => {
+  //   setLoginMenu(true)
+  // }
 
   const handleMenu = () => {
     setMenu(true);
@@ -24,7 +30,7 @@ const Header = () => {
   return (
     <>
       {/* MOBILE HEADER START */}
-      <header className=" flex flex-wrap large:hidden sticky">
+      <header className=" flex flex-wrap justify-center large:hidden sticky z-10">
         <strong className=" flex justify-center text-xs tracking-wider h-8 items-center">
           ADD ANYTHING HERE OR JUST REMOVE IT...
         </strong>
@@ -88,7 +94,7 @@ const Header = () => {
                     <a href="/list-product">DROPSHIPPER/RESELLER</a>
                   </li>
                   <li>
-                    <a href="">MASUK</a>
+                    <a href="/my-account">MASUK</a>
                   </li>
                   <li>
                     <a href="">NEWSLETTER</a>
@@ -115,7 +121,7 @@ const Header = () => {
       {/* MOBILE HEADER END */}
 
       {/* DESKTOP HEADER START */}
-      <header className=" hidden large:block sticky top-0">
+      <header className=" hidden large:block sticky top-0 z-10">
         <nav className=" px-4">
           {/* NAV TOP START */}
           <div className="nav___top flex justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
@@ -144,10 +150,8 @@ const Header = () => {
               </li>
             </ul>
             <ul className="flex divide-x items-center">
-              <li className=" mr-3 hover:text-[hsla(0,0%,7%,.85)]">
-                <a href="">
+              <li className=" mr-3 hover:text-[hsla(0,0%,7%,.85)] cursor-pointer" onClick={()=> setIsModalShow(true)}>
                   <span>Masuk / Daftar</span>
-                </a>
               </li>
               <li className=" px-3 hover:text-[hsla(0,0%,7%,.85)]">
                 <a href="" className="flex items-center gap-2">
@@ -247,7 +251,13 @@ const Header = () => {
         </nav>
       </header>
       {/* DESKTOP HEADER END */}
-    </>
+
+      {/* LOGIN MODAL START */}
+      {
+        isModalShow&&<LoginModal setIsModalShow={()=> setIsModalShow(false)}/>
+      }
+      {/* LOGIN MODAL END */}
+      </>
   );
 };
 
