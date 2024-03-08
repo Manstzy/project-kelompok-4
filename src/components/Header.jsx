@@ -144,7 +144,7 @@ const Header = () => {
             <ul className="flex divide-x items-center">
               <li className=" mr-3 hover:text-[hsla(0,0%,7%,.85)]">
                 <a href="">
-                  <span>Masuk / Daftar</span>
+                  <Link to={"/my-account"}>Masuk / Daftar</Link>
                 </a>
               </li>
               <li className=" px-3 hover:text-[hsla(0,0%,7%,.85)]">
