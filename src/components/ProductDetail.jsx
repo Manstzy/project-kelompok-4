@@ -20,28 +20,28 @@ const ProductDetail = () => {
           src="https://jubelio-store.s3.ap-southeast-1.amazonaws.com/sarungindonesia/2024/02/23033414/c93b88e0-65be-4942-8726-a4dac881f54b-800x800.jpg"
           alt=""
         />
-        <div className=" overflow-hidden miniLarge:h-28 -z-10">
+        <div className=" overflow-hidden miniLarge:h-28">
           <img
             className="opacity-[0.5] hover:opacity-100 -mb-[5px] hover:transform hover:-translate-y-[5px] overflow-hidden transition-all duration-300 cursor-grab "
             src="https://jubelio-store.s3.ap-southeast-1.amazonaws.com/sarungindonesia/2024/02/23033414/c93b88e0-65be-4942-8726-a4dac881f54b-800x800.jpg"
             alt=""
           />
         </div>
-        <div className="overflow-hidden miniLarge:h-28 -z-10">
+        <div className="overflow-hidden miniLarge:h-28">
           <img
             className="opacity-[0.5] hover:opacity-100 -mb-[5px] hover:transform hover:-translate-y-[5px] overflow-hidden transition-all duration-300 cursor-grab "
             src="https://jubelio-store.s3.ap-southeast-1.amazonaws.com/sarungindonesia/2024/02/23033424/d0100a56-dce9-46bf-8e99-1abd16060c15-300x300.jpg"
             alt=""
           />
         </div>
-        <div className="overflow-hidden miniLarge:h-28 -z-10 ">
+        <div className="overflow-hidden miniLarge:h-28">
           <img
             className="opacity-[0.5] hover:opacity-100 -mb-[5px] hover:transform hover:-translate-y-[5px] overflow-hidden transition-all duration-300 cursor-grab "
             src="https://jubelio-store.s3.ap-southeast-1.amazonaws.com/sarungindonesia/2024/02/23033427/3ea9ce5a-ca9d-4993-9521-0154aaf3816b-300x300.jpg"
             alt=""
           />
         </div>
-        <div className="overflow-hidden miniLarge:h-28 -z-10">
+        <div className="overflow-hidden miniLarge:h-28">
           <img
             className="opacity-[0.5] hover:opacity-100 -mb-[5px] hover:transform hover:-translate-y-[5px] overflow-hidden transition-all duration-300 cursor-grab"
             src="https://jubelio-store.s3.ap-southeast-1.amazonaws.com/sarungindonesia/2024/02/23033430/9f6678c6-e8ed-47d1-9f89-261da8f576ec-300x300.jpg"
