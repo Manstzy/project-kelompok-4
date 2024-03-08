@@ -3,11 +3,11 @@ import {
   BsEnvelope,
   BsFillTelephoneFill,
   BsHeartFill,
-} from 'react-icons/bs';
-import { IoClose, IoMenu, IoSearch } from 'react-icons/io5';
-import { FaRegClock } from 'react-icons/fa';
-import { useState } from 'react';
-import clsx from 'clsx';
+} from "react-icons/bs";
+import { IoClose, IoMenu, IoSearch } from "react-icons/io5";
+import { FaRegClock } from "react-icons/fa";
+import { useState } from "react";
+import clsx from "clsx";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <>
       {/* MOBILE HEADER START */}
-      <header className=" large:hidden sticky">
+      <header className=" large:hidden sticky w-full z-[9999999] fixed ">
         <strong className=" flex justify-center text-xs tracking-wider h-8 items-center">
           ADD ANYTHING HERE OR JUST REMOVE IT...
         </strong>
@@ -33,14 +33,15 @@ const Header = () => {
           </div>
           <div
             className={clsx(
-              'fixed h-full w-screen bg-black/50 top-0 right-0 -translate-x-full transition-transform z-[999999]',
-              menu && 'translate-x-0'
+              "fixed h-full w-screen bg-black/50 top-0 right-0 -translate-x-full transition-transform z-[999999]",
+              menu && "translate-x-0"
             )}
           >
             <button className="right-0 absolute" onClick={handleMenuCls}>
               <IoClose className="text-white opacity-50 hover:opacity-100 text-4xl" />
             </button>
-            <div className="flex flex-col justify-start h-full max-w-72 bg-white left-4 top-0 absolute p-8 gap-5 overflow-y-scroll">
+
+            <div className="flex flex-col justify-start h-full max-w-72 bg-white top-0 absolute px-6 py-8 w-[240px] phone:w-[300px] phone:p-8 gap-5 overflow-y-scroll z-50">
               <div>
                 <form
                   action="search"
@@ -56,7 +57,7 @@ const Header = () => {
                   </button>
                 </form>
               </div>
-              <div className=" text-grey-thin font-bold text-sm">
+              <div className=" text-grey-thin font-bold text-sm ">
                 <ul className="flex flex-col gap-4 text-wrap">
                   <li>
                     <a href="/list-product">SARUNG</a>
@@ -102,7 +103,7 @@ const Header = () => {
           <img
             src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
             alt="sarung-indonesia-logo"
-            className="w-[300px] h-[60px] cursor-pointer"
+            className="w-[180px] h-[40px] phone:w-[200px] phone:h-[50px] miniMedium:w-[240px] miniMedium:h-[60px] medium:w-[260px] medium:h-[60px] miniLarge:w-[280px] miniLarge:h-[70px] large:w-[400px] large:h-[80px] cursor-pointer"
           />
           <div className="cart">
             <BsCart className="text-3xl text-[#ED1C24] cursor-pointer" />
@@ -113,10 +114,9 @@ const Header = () => {
 
       {/* DESKTOP HEADER START */}
       <header className=" hidden large:block sticky top-0">
-        <nav className=" px-4">
-          
+        <nav>
           {/* NAV TOP START */}
-          <div className="nav___top flex justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
+          <div className="nav___top flex px-4 justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
             <ul className="flex divide-x items-center">
               <li className="flex mr-3 hover:text-[hsla(0,0%,7%,.85)]">
                 <a
@@ -164,7 +164,7 @@ const Header = () => {
             </ul>
           </div>
           {/* NAV TOP END */}
-          
+
           {/* NAV MID START */}
           <div className="nav___mid grid grid-cols-3 items-center justify-end bg-white bg-opacity-90">
             <div></div>
@@ -192,7 +192,7 @@ const Header = () => {
           {/* NAV MID END */}
 
           {/* NAV BOTTOM START */}
-          <div className="nav___bottom font-bold text-sm tracking-wide py-3 bg-white bg-opacity-100">
+          <div className="nav___bottom font-bold px-2 text-sm tracking-wide py-3 bg-white bg-opacity-100">
             <ul className="flex flex-row justify-center flex-wrap gap-4  ">
               <li>
                 <a href="/list-product" className="link-hover">
@@ -242,7 +242,6 @@ const Header = () => {
             </ul>
           </div>
           {/* NAV BOTTOM END */}
-          
         </nav>
       </header>
       {/* DESKTOP HEADER END */}

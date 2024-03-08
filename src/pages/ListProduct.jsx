@@ -1,11 +1,14 @@
-
+import ProductList from "../components/ProductList";
 import Sidebar from "../components/Sidebar";
 import LandingPageTemplate from "../components/templates/LandingPageTemplate";
 
 const ListProduct = () => {
   return (
     <LandingPageTemplate>
-      <Sidebar />
+      <div className="flex">
+        <Sidebar />
+        <ProductList />
+      </div>
     </LandingPageTemplate>
   );
 };
