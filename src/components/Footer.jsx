@@ -7,8 +7,13 @@ import Faceboock from "../../images/faceboock.svg";
 
 const Footer = () => {
   return (
+<<<<<<< HEAD
     <div className="relative">
       <img src={Background} className="w-full h-full absolute" alt="" />
+=======
+    <div className="relative z-0">
+      <img src={Background} className="w-full h-full absolute " alt="" />
+>>>>>>> 7668888bd06940f8449227b0e3d4af5303ca957d
 
       <div className="large:grid large:grid-cols-3">
         <div>

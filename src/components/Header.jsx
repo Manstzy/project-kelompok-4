@@ -3,11 +3,11 @@ import {
   BsEnvelope,
   BsFillTelephoneFill,
   BsHeartFill,
-} from 'react-icons/bs';
-import { IoClose, IoMenu, IoSearch } from 'react-icons/io5';
-import { FaRegClock } from 'react-icons/fa';
-import { useState } from 'react';
-import clsx from 'clsx';
+} from "react-icons/bs";
+import { IoClose, IoMenu, IoSearch } from "react-icons/io5";
+import { FaRegClock } from "react-icons/fa";
+import { useState } from "react";
+import clsx from "clsx";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -24,7 +24,11 @@ const Header = () => {
   return (
     <>
       {/* MOBILE HEADER START */}
+<<<<<<< HEAD
       <header className=" flex flex-wrap large:hidden sticky">
+=======
+      <header className=" large:hidden sticky w-full z-[9999999] fixed ">
+>>>>>>> 7668888bd06940f8449227b0e3d4af5303ca957d
         <strong className=" flex justify-center text-xs tracking-wider h-8 items-center">
           ADD ANYTHING HERE OR JUST REMOVE IT...
         </strong>
@@ -33,17 +37,30 @@ const Header = () => {
             <IoMenu className="text-3xl" />
           </div>
           <div
+<<<<<<< HEAD
             className={
               menu == false
                 ? 'fixed h-full w-screen bg-black/50 top-0 right-0 hidden -translate-x-full transition-transform'
                 : ' fixed h-full w-screen bg-black/50 top-0 right-0 block transition-transform translate-x-0'
             }
+=======
+            className={clsx(
+              "fixed h-full w-screen bg-black/50 top-0 right-0 -translate-x-full transition-transform z-[999999]",
+              menu && "translate-x-0"
+            )}
+>>>>>>> 7668888bd06940f8449227b0e3d4af5303ca957d
           >
             <button className="right-0 absolute" onClick={handleMenuCls}>
               <IoClose className="text-white opacity-50 hover:opacity-100 text-4xl" />
             </button>
+<<<<<<< HEAD
             <div className="flex flex-col justify-start h-full max-w-72 bg-white left-4 top-0 absolute p-8 gap-5 overflow-y-scroll">
               <div className='w-full'>
+=======
+
+            <div className="flex flex-col justify-start h-full max-w-72 bg-white top-0 absolute px-6 py-8 w-[240px] phone:w-[300px] phone:p-8 gap-5 overflow-y-scroll z-50">
+              <div>
+>>>>>>> 7668888bd06940f8449227b0e3d4af5303ca957d
                 <form
                   action="search"
                   className="flex justify-end border-[1px] h-8 items-center rounded-full px-3 w-full justify-self-end bg-[rgba(0,0,0,.03)] text-sm"
@@ -58,7 +75,7 @@ const Header = () => {
                   </button>
                 </form>
               </div>
-              <div className=" text-grey-thin font-bold text-sm">
+              <div className=" text-grey-thin font-bold text-sm ">
                 <ul className="flex flex-col gap-4 text-wrap">
                   <li>
                     <a href="/list-product">SARUNG</a>
@@ -100,6 +117,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           <a href="/" className='flex justify-center items-center'>
             <img
               src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
@@ -107,6 +125,14 @@ const Header = () => {
               className="w-1/2 h-auto"
             />
           </a>
+=======
+
+          <img
+            src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
+            alt="sarung-indonesia-logo"
+            className="w-[180px] h-[40px] phone:w-[200px] phone:h-[50px] miniMedium:w-[240px] miniMedium:h-[60px] medium:w-[260px] medium:h-[60px] miniLarge:w-[280px] miniLarge:h-[70px] large:w-[400px] large:h-[80px] cursor-pointer"
+          />
+>>>>>>> 7668888bd06940f8449227b0e3d4af5303ca957d
           <div className="cart">
             <BsCart className="text-3xl text-[#ED1C24] cursor-pointer" />
           </div>
@@ -116,9 +142,13 @@ const Header = () => {
 
       {/* DESKTOP HEADER START */}
       <header className=" hidden large:block sticky top-0">
+<<<<<<< HEAD
         <nav className=" px-4">
+=======
+        <nav>
+>>>>>>> 7668888bd06940f8449227b0e3d4af5303ca957d
           {/* NAV TOP START */}
-          <div className="nav___top flex justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
+          <div className="nav___top flex px-4 justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
             <ul className="flex divide-x items-center">
               <li className="flex mr-3 hover:text-[hsla(0,0%,7%,.85)]">
                 <a
@@ -194,7 +224,7 @@ const Header = () => {
           {/* NAV MID END */}
 
           {/* NAV BOTTOM START */}
-          <div className="nav___bottom font-bold text-sm tracking-wide py-3 bg-white bg-opacity-100">
+          <div className="nav___bottom font-bold px-2 text-sm tracking-wide py-3 bg-white bg-opacity-100">
             <ul className="flex flex-row justify-center flex-wrap gap-4  ">
               <li>
                 <a href="/list-product" className="link-hover">

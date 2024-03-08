@@ -1,13 +1,16 @@
-import LandingPageTemplate from "../components/templates/LandingPageTemplate"
+import ProductList from "../components/ProductList";
+import Sidebar from "../components/Sidebar";
+import LandingPageTemplate from "../components/templates/LandingPageTemplate";
 
 const ListProduct = () => {
   return (
     <LandingPageTemplate>
-      <a href="/list-product/detail">
-        INI HALAMAN LIST PRODUCT
-        </a>
+      <div className="flex">
+        <Sidebar />
+        <ProductList />
+      </div>
     </LandingPageTemplate>
-  )
-}
+  );
+};
 
-export default ListProduct
+export default ListProduct;
