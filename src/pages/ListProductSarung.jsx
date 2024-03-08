@@ -2,7 +2,7 @@ import ProductList from "../components/ProductList";
 import Sidebar from "../components/Sidebar";
 import LandingPageTemplate from "../components/templates/LandingPageTemplate";
 
-const ListProduct = () => {
+const ListProductSarung = () => {
   return (
     <LandingPageTemplate>
       <div className="flex">
@@ -13,4 +13,4 @@ const ListProduct = () => {
   );
 };
 
-export default ListProduct;
+export default ListProductSarung;

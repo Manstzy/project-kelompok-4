@@ -8,6 +8,7 @@ import { IoClose, IoMenu, IoSearch } from "react-icons/io5";
 import { FaRegClock } from "react-icons/fa";
 import { useState } from "react";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -19,15 +20,14 @@ const Header = () => {
   const handleMenuCls = () => {
     setMenu(false);
   };
-
   return (
     <>
       {/* MOBILE HEADER START */}
-      <header className=" large:hidden sticky w-full z-[9999999] fixed ">
-        <strong className=" flex justify-center text-xs tracking-wider h-8 items-center">
+      <div className="large:hidden sticky w-full z-50 top-0 transition duration-300">
+        {/* <strong className="sticky bg-white justify-center text-xs tracking-wider h-10 items-center">
           ADD ANYTHING HERE OR JUST REMOVE IT...
-        </strong>
-        <nav className="flex items-center justify-between px-[15px]">
+        </strong> */}
+        <nav className="flex items-center sticky bg-white w-full py-5 justify-between px-[15px]">
           <div className="burger cursor-pointer" onClick={handleMenu}>
             <IoMenu className="text-3xl" />
           </div>
@@ -60,10 +60,10 @@ const Header = () => {
               <div className=" text-grey-thin font-bold text-sm ">
                 <ul className="flex flex-col gap-4 text-wrap">
                   <li>
-                    <a href="/list-product">SARUNG</a>
+                    <Link to="/list-product/sarung">SARUNG</Link>
                   </li>
                   <li>
-                    <a href="/list-product">BAJU MUSLIM</a>
+                    <Link to="/list-product">BAJU MUSLIM</Link>
                   </li>
                   <li>
                     <a href="/list-product">SONGKOK</a>
@@ -109,11 +109,11 @@ const Header = () => {
             <BsCart className="text-3xl text-[#ED1C24] cursor-pointer" />
           </div>
         </nav>
-      </header>
+      </div>
       {/* MOBILE HEADER END */}
 
       {/* DESKTOP HEADER START */}
-      <header className=" hidden large:block sticky top-0">
+      <div className=" hidden large:block w-full sticky z-50 top-0 ">
         <nav>
           {/* NAV TOP START */}
           <div className="nav___top flex px-4 justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
@@ -195,55 +195,55 @@ const Header = () => {
           <div className="nav___bottom font-bold px-2 text-sm tracking-wide py-3 bg-white bg-opacity-100">
             <ul className="flex flex-row justify-center flex-wrap gap-4  ">
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/sarung" className="link-hover">
                   SARUNG
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/baju-muslim" className="link-hover">
                   BAJU MUSLIM
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/songkok" className="link-hover">
                   SONGKOK
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/subaiyah" className="link-hover">
                   SUBAIYAH
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/kain-batik" className="link-hover">
                   KAIN BATIK
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/sprei" className="link-hover">
                   SPREI
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/kain-grosir" className="link-hover">
                   KAIN GROSIR
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/produk-lainnya" className="link-hover">
                   PRODUK LAINNYA
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/drop-shipper" className="link-hover">
                   DROP SHIPPER/RESELLLER
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           {/* NAV BOTTOM END */}
         </nav>
-      </header>
+      </div>
       {/* DESKTOP HEADER END */}
     </>
   );

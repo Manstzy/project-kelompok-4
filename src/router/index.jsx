@@ -1,19 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
-import ListProduct from "../pages/ListProduct";
+import ListProductSarung from "../pages/ListProductSarung";
 import ProductDetailPage from "../pages/ProductDetailPage";
 
 export const router = createBrowserRouter([
   {
-    path:"/",
-    element:<LandingPage/>,
+    path: "/",
+    element: <LandingPage />,
   },
   {
-    path:"/list-product",
-    element:<ListProduct/>,
+    path: "/list-product/sarung",
+    element: <ListProductSarung />,
   },
   {
-    path:"/list-product/detail",
-    element:<ProductDetailPage/>,
-  }
-])
+    path: "/list-product/detail",
+    element: <ProductDetailPage />,
+  },
+]);
