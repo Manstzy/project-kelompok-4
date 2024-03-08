@@ -12,7 +12,7 @@ const LandingPage = () => {
 
   return (
     <LandingPageTemplate>
-      <div className='pb-8'>
+      <div className='my-8'>
           <Carousel>
         {imgSlides.map((slides, i) => (
           <img src={slides} key={i} />
