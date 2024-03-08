@@ -60,7 +60,7 @@ const ProductDetailDescription = () => {
         <p className="mb-5">
           Panjang Badan x Lebar Dada x Lebar Pundak x Panjang Lengan
         </p>
-        <p className="mb-5">
+        <div className="mb-5">
           <ul>
             <li>- S (73 cm x 53,5 cm x 46 cm x 24 cm)</li>
             <li>- M (74 cm x 55,5 cm x 48 cm x 25 cm)</li>
@@ -68,7 +68,7 @@ const ProductDetailDescription = () => {
             <li>- XL (76 cm x 59,5 cm x 52 cm x 27 cm)</li>
             <li>- XXL (77cm x 61,5 cm x 54 cm x 28 cm)</li>
           </ul>
-        </p>
+        </div>
         <p className="mb-5">Cara perawatan / cuci:</p>
         <p className="mb-5">
           Gunakan air dingin untuk mencuci baju dan selalu posisikan bagian
@@ -91,23 +91,30 @@ const ProductDetailDescription = () => {
         </p>
         <p className="mb-5">Atlas, Inspiring the World</p>
       </section>
-      <section className={
+      <section
+        className={
           changeTab == true ? 'description__content pt-4 block' : 'hidden'
-        }>
+        }
+      >
         <table className=" text-left w-full">
-          <tr className=' border-b-2'>
-            <th className=' w-3/12'>BERAT</th>
-            <td>600 gram</td>
-          </tr>
-          {/* <hr className='w-full'/> */}
-          <tr className=' border-b-2'>
-            <th>DIMENSI</th>
-            <td>31,0000 x 20,0000 x 6,0000 cm</td>
-          </tr>
-          <tr className=' border-b-2'>
-            <th>SIZE</th>
-            <td>L, M, XL</td>
-          </tr>
+          <tbody>
+            <tr className=" border-b-2">
+              <th className=" w-3/12">BERAT</th>
+              <td>600 gram</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr className=" border-b-2">
+              <th>DIMENSI</th>
+              <td>31,0000 x 20,0000 x 6,0000 cm</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr className=" border-b-2">
+              <th>SIZE</th>
+              <td>L, M, XL</td>
+            </tr>
+          </tbody>
         </table>
       </section>
       <section className="share-icons flex flex-row items-center gap-3 my-4">
@@ -131,4 +138,4 @@ const ProductDetailDescription = () => {
   );
 };
 
-export default ProductDetailDescription
+export default ProductDetailDescription;

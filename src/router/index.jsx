@@ -3,6 +3,7 @@ import LandingPage from "../pages/LandingPage";
 import ListProductSarung from "../pages/ListProductSarung";
 import ProductDetailPage from "../pages/ProductDetailPage";
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -17,3 +18,5 @@ export const router = createBrowserRouter([
     element: <ProductDetailPage />,
   },
 ]);
+
+
