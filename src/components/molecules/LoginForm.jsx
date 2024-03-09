@@ -16,7 +16,7 @@ function LoginForm() {
                 <input
                   id="email-input-log"
                   type="email"
-                  className="border-2 block w-full px-3 mb-4"
+                  className="border-2 block w-full px-3 h-10 mb-4 shadow-input"
                 />
               </div>
               <div className="mb-2">
@@ -29,7 +29,7 @@ function LoginForm() {
                 <input
                   id="pass-input-log"
                   type="password"
-                  className="border-2 block w-full pl-3 pr-8 mb-4"
+                  className="border-2 block w-full pl-3 pr-8 mb-4 h-10 shadow-input"
                 />
               </div>
               <div className="mb-4 font-semibold">
@@ -41,7 +41,7 @@ function LoginForm() {
                 <label htmlFor="forget-check">Ingat saya</label>
               </div>
 
-              <button className="block w-24 h-10 bg-[#ED1C24] text-white mb-2">
+              <button className="block w-24 h-10 bg-[#ED1C24] text-white mb-2 font-bold">
                 MASUK
               </button>
               <a href="">Kehilangan kata sandi?</a>
@@ -62,7 +62,7 @@ function LoginForm() {
                 <input
                   id="email-input-reg"
                   type="email"
-                  className="border-2 block w-full px-3 mb-4"
+                  className="border-2 block w-full px-3 mb-4 h-10 shadow-input"
                 />
               </div>
               <div className="mb-2">
@@ -75,7 +75,7 @@ function LoginForm() {
                 <input
                   id="pass-input-reg"
                   type="password"
-                  className="border-2 block w-full pl-3 pr-8 mb-4"
+                  className="border-2 block w-full pl-3 pr-8 mb-4 h-10 shadow-input"
                 />
               </div>
               <div className="mb-4 text-sm">
@@ -86,7 +86,7 @@ function LoginForm() {
                 </p>
               </div>
 
-              <button className="block w-24 h-10 bg-[#ED1C24] text-white mb-2">
+              <button className="block w-24 h-10 bg-[#ED1C24] text-white mb-2 font-bold">
                 DAFTAR
               </button>
             </form>
