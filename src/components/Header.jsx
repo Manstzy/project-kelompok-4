@@ -223,8 +223,9 @@ const Header = () => {
         </ul>
       </div>
       {/* NAV TOP END */}
+
       <header className=" hidden large:block sticky top-0 z-20">
-        <nav className="">
+        <nav>
           {/* NAV MID START */}
           <div className="nav___mid grid grid-cols-3 px-4 items-center justify-end bg-white bg-opacity-90">
             <div></div>
@@ -255,47 +256,47 @@ const Header = () => {
           <div className="nav___bottom font-bold px-4 text-sm tracking-wide py-3 bg-white bg-opacity-100">
             <ul className="flex flex-row justify-center flex-wrap gap-4  ">
               <li>
-                <Link to="/list-product/sarung" className="link-hover">
+                <Link to="/list-product/sarung" className="link-hover-after">
                   SARUNG
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/baju-muslim" className="link-hover">
+                <Link to="/list-product/baju-muslim" className="link-hover-after">
                   BAJU MUSLIM
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/songkok" className="link-hover">
+                <Link to="/list-product/songkok" className="link-hover-after">
                   SONGKOK
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/subaiyah" className="link-hover">
+                <Link to="/list-product/subaiyah" className="link-hover-after">
                   SUBAIYAH
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/kain-batik" className="link-hover">
+                <Link to="/list-product/kain-batik" className="link-hover-after">
                   KAIN BATIK
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/sprei" className="link-hover">
+                <Link to="/list-product/sprei" className="link-hover-after">
                   SPREI
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/grosir" className="link-hover">
+                <Link to="/list-product/grosir" className="link-hover-after">
                   KAIN GROSIR
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/produk-lainnya" className="link-hover">
+                <Link to="/list-product/produk-lainnya" className="link-hover-after">
                   PRODUK LAINNYA
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/dropshipper" className="link-hover">
+                <Link to="/list-product/dropshipper" className="link-hover-after">
                   DROPSHIPPER/RESELLER
                 </Link>
               </li>
