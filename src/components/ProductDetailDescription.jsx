@@ -13,13 +13,13 @@ const ProductDetailDescription = () => {
   };
 
   return (
-    <div className=" pb-8">
-      <nav className="flex justify-center gap-4 py-3 font-semibold text-grey-thin">
-        <div className="cursor-pointer hover:text-black" onClick={handleDesc}>
+    <div className=" pb-8 px-4">
+      <nav className="flex flex-col medium:flex-row justify-center gap-4 py-3 text-sm font-semibold text-grey-thin">
+        <div className={changeTab==false?'cursor-pointer link-before':'cursor-pointer hover:text-[#121212D9] link-hover-before'} onClick={handleDesc}>
           DESKRIPSI
         </div>
         <div
-          className="cursor-pointer hover:text-black focus:text-black"
+          className={changeTab==true?'cursor-pointer link-before':'cursor-pointer hover:text-[#121212D9] link-hover-before'}
           onClick={handleInfo}
         >
           INFORMASI TAMBAHAN

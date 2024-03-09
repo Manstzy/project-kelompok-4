@@ -56,7 +56,7 @@ const Header = () => {
             <button className="right-0 absolute" onClick={handleMenuCls}>
               <IoClose className="text-white opacity-50 hover:opacity-100 text-4xl" />
             </button>
-            <div className="flex flex-col justify-start h-full max-w-72 bg-white left-0 top-0 absolute p-8 gap-5 overflow-y-scroll">
+            <div className="flex flex-col justify-start h-full max-w-72 bg-white left-0 top-0 absolute p-8 gap-5 overflow-y-auto">
               <div className="w-full">
                 <form
                   action="search"
@@ -155,7 +155,7 @@ const Header = () => {
           </div>
           <a href="/" className="flex justify-center items-center">
             <img
-              src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
+              src="../../images/logo-sarung.png"
               alt="sarung-indonesia-logo"
               className="w-1/2 h-auto"
             />
@@ -226,7 +226,7 @@ const Header = () => {
             <div></div>
             <a href="/" className="flex justify-center">
               <img
-                src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
+                src="../../images/logo-sarung.png"
                 alt=""
                 className=" w-[300px] h-[60px]"
               />
