@@ -6,7 +6,7 @@ function Banner({bglink, word1, word2}) {
           <h1 className="text-[32px] my-2 text-center">{word1}</h1>
           <p className="text-[16px] my-4 text-center">{word2}</p>
           
-          <a href="/list-product" className=" flex justify-center items-center border-2 border-solid border-white px-4 h-9">
+          <a href="/list-product/sarung" className=" flex justify-center items-center border-2 border-solid border-white px-4 h-9">
             <button>
               <span className="font-bold text-[16px]">SHOP NOW</span>
             </button>

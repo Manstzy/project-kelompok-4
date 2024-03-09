@@ -3,8 +3,8 @@ import {
   BsEnvelope,
   BsFillTelephoneFill,
   BsHeartFill,
-} from "react-icons/bs";
-import { IoClose, IoMenu, IoSearch } from "react-icons/io5";
+} from 'react-icons/bs';
+import { IoClose, IoMenu, IoSearch } from 'react-icons/io5';
 import {
   FaFacebookF,
   FaInstagram,
@@ -16,12 +16,13 @@ import LoginModal from "../components/organisms/LoginModal";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  selectTotalPrice,
-  selectTotalItems,
   selectItems,
+  selectTotalItems,
+  selectTotalPrice,
   removeCart,
   addItemsCart,
 } from "../redux/cart/cartSlice";
+import SarungLogo from "../../images/logo-sarung.png"
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -57,8 +58,8 @@ const Header = () => {
 
   {
     menu == true
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "visible");
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'visible');
   }
 
   return (
@@ -78,14 +79,14 @@ const Header = () => {
           <div
             className={
               menu == false
-                ? "fixed h-full w-screen bg-black/50 top-0 right-0 hidden -translate-x-full transition-transform"
-                : " fixed h-full w-screen bg-black/50 top-0 right-0 block transition-transform translate-x-0"
+                ? 'fixed h-full w-screen bg-black/50 top-0 right-0 hidden -translate-x-full transition-transform'
+                : ' fixed h-full w-screen bg-black/50 top-0 right-0 block transition-transform translate-x-0'
             }
           >
             <button className="right-0 absolute" onClick={handleMenuCls}>
               <IoClose className="text-white opacity-50 hover:opacity-100 text-4xl" />
             </button>
-            <div className="flex flex-col justify-start h-full max-w-72 bg-white w-60 left-0 top-0 absolute p-4 phone:p-8 phone:w-72  gap-5 overflow-y-scroll">
+            <div className="flex flex-col justify-start h-full max-w-72 bg-white left-0 top-0 absolute p-8 gap-5 overflow-y-auto">
               <div className="w-full">
                 <form
                   action="search"
@@ -101,7 +102,6 @@ const Header = () => {
                   </button>
                 </form>
               </div>
-
               <div className=" text-grey-thin font-bold text-sm">
                 <ul className="flex flex-col gap-4 text-wrap">
                   <li>
@@ -161,7 +161,7 @@ const Header = () => {
                   <li>
                     <span>
                       <a href="" className="flex items-center gap-2">
-                        {" "}
+                        {' '}
                         <BsEnvelope className="text-xl" />
                         NEWSLETTER
                       </a>
@@ -189,7 +189,7 @@ const Header = () => {
           </div>
           <a href="/" className="flex justify-center items-center">
             <img
-              src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
+              src={SarungLogo}
               alt="sarung-indonesia-logo"
               className="w-1/2 h-auto"
             />
@@ -257,14 +257,15 @@ const Header = () => {
         </ul>
       </div>
       {/* NAV TOP END */}
+
       <header className=" hidden large:block sticky top-0 z-20">
-        <nav className="">
+        <nav>
           {/* NAV MID START */}
           <div className="nav___mid grid grid-cols-3 px-4 items-center justify-end bg-white bg-opacity-90">
             <div></div>
             <a href="/" className="flex justify-center">
               <img
-                src="https://sarungindonesia.co.id/wp-content/uploads/2020/06/SI_LOGO-1400x276.png"
+                src={SarungLogo}
                 alt=""
                 className=" w-[300px] h-[60px]"
               />
@@ -289,47 +290,47 @@ const Header = () => {
           <div className="nav___bottom font-bold px-4 text-sm tracking-wide py-3 bg-white bg-opacity-100">
             <ul className="flex flex-row justify-center flex-wrap gap-4  ">
               <li>
-                <Link to="/list-product/sarung" className="link-hover">
+                <Link to="/list-product/sarung" className="link-hover-after">
                   SARUNG
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/baju-muslim" className="link-hover">
+                <Link to="/list-product/baju-muslim" className="link-hover-after">
                   BAJU MUSLIM
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/songkok" className="link-hover">
+                <Link to="/list-product/songkok" className="link-hover-after">
                   SONGKOK
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/subaiyah" className="link-hover">
+                <Link to="/list-product/subaiyah" className="link-hover-after">
                   SUBAIYAH
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/kain-batik" className="link-hover">
+                <Link to="/list-product/kain-batik" className="link-hover-after">
                   KAIN BATIK
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/sprei" className="link-hover">
+                <Link to="/list-product/sprei" className="link-hover-after">
                   SPREI
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/grosir" className="link-hover">
+                <Link to="/list-product/grosir" className="link-hover-after">
                   KAIN GROSIR
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/produk-lainnya" className="link-hover">
+                <Link to="/list-product/produk-lainnya" className="link-hover-after">
                   PRODUK LAINNYA
                 </Link>
               </li>
               <li>
-                <Link to="/list-product/dropshipper" className="link-hover">
+                <Link to="/list-product/dropshipper" className="link-hover-after">
                   DROPSHIPPER/RESELLER
                 </Link>
               </li>

@@ -14,7 +14,16 @@
 }
 
 @layer components {
-  .link-hover {
+  .link-hover-after {
     @apply after:content-[''] after:block after:pb-2 after:border-b-4 after:border-[#ED1C24] after:scale-x-0 after:duration-200 hover:after:scale-x-100 hover:text-[#ED1C24];
+  }
+  .link-before {
+    @apply before:content-[''] before:flex before:justify-start before:pb-2 before:border-t-[3px] before:border-[#ED1C24]  before:duration-200 before:scale-x-100 text-[#121212D9];
+  }
+  .link-hover-before {
+    @apply before:content-[''] before:flex before:justify-start before:pb-2 before:border-t-[3px] before:border-[#ED1C24] before:scale-x-0 before:duration-200 hover:before:scale-x-100;
+  }
+  .shadow-input {
+    @apply focus:outline-none shadow-inner hover:shadow-none  focus:shadow
   }
 }
