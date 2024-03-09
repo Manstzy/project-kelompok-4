@@ -11,6 +11,9 @@ import {
   FaRegClock,
   FaTwitter,
 } from 'react-icons/fa';
+
+import SarungLogo from '../../images/logo-sarung.png'
+
 import { useState } from 'react';
 import LoginModal from '../components/organisms/LoginModal';
 import { Link } from 'react-router-dom';
@@ -160,7 +163,7 @@ const Header = () => {
           </div>
           <a href="/" className="flex justify-center items-center">
             <img
-              src="../../images/logo-sarung.png"
+              src={SarungLogo}
               alt="sarung-indonesia-logo"
               className="w-1/2 h-auto"
             />
@@ -227,7 +230,7 @@ const Header = () => {
             <div></div>
             <a href="/" className="flex justify-center">
               <img
-                src="../../images/logo-sarung.png"
+                src={SarungLogo}
                 alt=""
                 className=" w-[300px] h-[60px]"
               />
