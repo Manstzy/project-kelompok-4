@@ -1,16 +1,18 @@
-import ProductList from "../components/ProductList";
+
+import ProductListSongkok from "../components/ProductListSongkok";
 import Sidebar from "../components/Sidebar";
 import LandingPageTemplate from "../components/templates/LandingPageTemplate";
+import { dataSongkok } from "../data/data";
 
-const ListProduct = () => {
+const ListProductSongkok = () => {
   return (
     <LandingPageTemplate>
       <div className="flex">
         <Sidebar />
-        <ProductList />
+        <ProductListSongkok dataSongkok={dataSongkok} />
       </div>
     </LandingPageTemplate>
   );
 };
 
-export default ListProduct;
+export default ListProductSongkok;

@@ -3,16 +3,17 @@ import {
   BsEnvelope,
   BsFillTelephoneFill,
   BsHeartFill,
-} from 'react-icons/bs';
-import { IoClose, IoMenu, IoSearch } from 'react-icons/io5';
+} from "react-icons/bs";
+import { IoClose, IoMenu, IoSearch } from "react-icons/io5";
 import {
   FaFacebookF,
   FaInstagram,
   FaRegClock,
   FaTwitter,
-} from 'react-icons/fa';
-import { useState } from 'react';
-import LoginModal from '../components/organisms/LoginModal';
+} from "react-icons/fa";
+import { useState } from "react";
+import LoginModal from "../components/organisms/LoginModal";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -29,8 +30,8 @@ const Header = () => {
 
   {
     menu == true
-      ? (document.body.style.overflow = 'hidden')
-      : (document.body.style.overflow = 'visible');
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "visible");
   }
 
   return (
@@ -42,21 +43,21 @@ const Header = () => {
         </strong>
       </div>
       <header className="header__master flex flex-wrap justify-center py-2 large:hidden sticky top-0 bg-opacity-90 bg-white z-20 ">
-        <nav className="flex items-center justify-between px-[15px]">
+        <nav className="flex items-center justify-between px-[15px] ">
           <div className="burger cursor-pointer" onClick={handleMenu}>
             <IoMenu className="text-3xl" />
           </div>
           <div
             className={
               menu == false
-                ? 'fixed h-full w-screen bg-black/50 top-0 right-0 hidden -translate-x-full transition-transform'
-                : ' fixed h-full w-screen bg-black/50 top-0 right-0 block transition-transform translate-x-0'
+                ? "fixed h-full w-screen bg-black/50 top-0 right-0 hidden -translate-x-full transition-transform"
+                : " fixed h-full w-screen bg-black/50 top-0 right-0 block transition-transform translate-x-0"
             }
           >
             <button className="right-0 absolute" onClick={handleMenuCls}>
               <IoClose className="text-white opacity-50 hover:opacity-100 text-4xl" />
             </button>
-            <div className="flex flex-col justify-start h-full max-w-72 bg-white left-0 top-0 absolute p-8 gap-5 overflow-y-scroll">
+            <div className="flex flex-col justify-start h-full max-w-72 bg-white w-60 left-0 top-0 absolute p-4 phone:p-8 phone:w-72  gap-5 overflow-y-scroll">
               <div className="w-full">
                 <form
                   action="search"
@@ -72,62 +73,67 @@ const Header = () => {
                   </button>
                 </form>
               </div>
-              <div className=" text-grey-thin font-bold text-sm ">
+
+              <div className=" text-grey-thin font-bold text-sm">
                 <ul className="flex flex-col gap-4 text-wrap">
                   <li>
                     <span>
-                      <a href="/list-product">SARUNG</a>
+                      <Link to="/list-product/sarung">SARUNG</Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/list-product">BAJU MUSLIM</a>
+                      <Link to="/list-product/baju-muslim">BAJU MUSLIM</Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/list-product">SONGKOK</a>
+                      <Link to="/list-product/songkok">SONGKOK</Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/list-product">SUBAIYAH</a>
+                      <Link to="/list-product/subaiyah">SUBAIYAH</Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/list-product">KAIN BATIK</a>
+                      <Link to="/list-product/kain-batik">KAIN BATIK</Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/list-product">SPREI</a>
+                      <Link to="/list-product/sprei">SPREI</Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/list-product">GROSIR</a>
+                      <Link to="/list-product/grosir">GROSIR</Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/list-product">PRODUK LAINNYA</a>
+                      <Link to="/list-product/produk-lainnya">
+                        PRODUK LAINNYA
+                      </Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/list-product">DROPSHIPPER/RESELLER</a>
+                      <Link to="/list-product/dropshipper">
+                        DROPSHIPPER/RESELLER
+                      </Link>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="/my-account"> MASUK</a>
+                      <Link to="/my-account"> MASUK</Link>
                     </span>
                   </li>
                   <li>
                     <span>
                       <a href="" className="flex items-center gap-2">
-                        {' '}
+                        {" "}
                         <BsEnvelope className="text-xl" />
                         NEWSLETTER
                       </a>
@@ -168,59 +174,55 @@ const Header = () => {
       {/* MOBILE HEADER END */}
 
       {/* DESKTOP HEADER START */}
-          {/* NAV TOP START */}
-          <div className="nav___top hidden large:flex px-4 justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
-            <ul className="flex divide-x items-center">
-              <li className="flex mr-3 hover:text-[hsla(0,0%,7%,.85)]">
-                <a
-                  href="mailto:cs@sarungindonesia.co.id"
-                  className="flex items-center gap-2"
-                >
-                  <BsEnvelope className="text-base" />
-                  <span>CONTACT</span>
-                </a>
-              </li>
-              <li className="flex items-center px-3 gap-2 hover:text-[hsla(0,0%,7%,.85)]">
-                <FaRegClock className="text-base" />
-                <span>08:00 - 17:00</span>
-              </li>
-              <li className="flex pl-3 hover:text-[hsla(0,0%,7%,.85)]">
-                <a
-                  href="tel:+62-858-0840-0251"
-                  className="flex items-center gap-2"
-                >
-                  <BsFillTelephoneFill className="text-base" />
-                  <span>+62-858-0840-0251</span>
-                </a>
-              </li>
-            </ul>
-            <ul className="flex divide-x items-center">
-              <li
-                className=" mr-3 hover:text-[hsla(0,0%,7%,.85)] cursor-pointer"
-                onClick={() => setIsModalShow(true)}
-              >
-                <span>Masuk / Daftar</span>
-              </li>
-              <li className=" px-3 hover:text-[hsla(0,0%,7%,.85)]">
-                <a href="" className="flex items-center gap-2">
-                  <span>Favorite</span>
-                  <BsHeartFill />
-                </a>
-              </li>
-              <li className="pl-3 hover:text-[hsla(0,0%,7%,.85)]">
-                <a href="" className="flex gap-2 items-center">
-                  <p>
-                    Keranjang / <span>Rp 0</span>
-                  </p>
-                  <BsCart className="w-6 h-6 text-[#ED1C24]" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* NAV TOP END */}
+      {/* NAV TOP START */}
+      <div className="nav___top hidden large:flex px-4 justify-between py-2 text-grey-thin text-sm bg-opacity-90 bg-white">
+        <ul className="flex divide-x items-center">
+          <li className="flex mr-3 hover:text-[hsla(0,0%,7%,.85)]">
+            <a
+              href="mailto:cs@sarungindonesia.co.id"
+              className="flex items-center gap-2"
+            >
+              <BsEnvelope className="text-base" />
+              <span>CONTACT</span>
+            </a>
+          </li>
+          <li className="flex items-center px-3 gap-2 hover:text-[hsla(0,0%,7%,.85)]">
+            <FaRegClock className="text-base" />
+            <span>08:00 - 17:00</span>
+          </li>
+          <li className="flex pl-3 hover:text-[hsla(0,0%,7%,.85)]">
+            <a href="tel:+62-858-0840-0251" className="flex items-center gap-2">
+              <BsFillTelephoneFill className="text-base" />
+              <span>+62-858-0840-0251</span>
+            </a>
+          </li>
+        </ul>
+        <ul className="flex divide-x items-center">
+          <li
+            className=" mr-3 hover:text-[hsla(0,0%,7%,.85)] cursor-pointer"
+            onClick={() => setIsModalShow(true)}
+          >
+            <span>Masuk / Daftar</span>
+          </li>
+          <li className=" px-3 hover:text-[hsla(0,0%,7%,.85)]">
+            <a href="" className="flex items-center gap-2">
+              <span>Favorite</span>
+              <BsHeartFill />
+            </a>
+          </li>
+          <li className="pl-3 hover:text-[hsla(0,0%,7%,.85)]">
+            <a href="" className="flex gap-2 items-center">
+              <p>
+                Keranjang / <span>Rp 0</span>
+              </p>
+              <BsCart className="w-6 h-6 text-[#ED1C24]" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      {/* NAV TOP END */}
       <header className=" hidden large:block sticky top-0 z-20">
         <nav className="">
-
           {/* NAV MID START */}
           <div className="nav___mid grid grid-cols-3 px-4 items-center justify-end bg-white bg-opacity-90">
             <div></div>
@@ -251,49 +253,49 @@ const Header = () => {
           <div className="nav___bottom font-bold px-4 text-sm tracking-wide py-3 bg-white bg-opacity-100">
             <ul className="flex flex-row justify-center flex-wrap gap-4  ">
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/sarung" className="link-hover">
                   SARUNG
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/baju-muslim" className="link-hover">
                   BAJU MUSLIM
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/songkok" className="link-hover">
                   SONGKOK
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/subaiyah" className="link-hover">
                   SUBAIYAH
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/kain-batik" className="link-hover">
                   KAIN BATIK
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/sprei" className="link-hover">
                   SPREI
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/grosir" className="link-hover">
                   KAIN GROSIR
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
+                <Link to="/list-product/produk-lainnya" className="link-hover">
                   PRODUK LAINNYA
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/list-product" className="link-hover">
-                  DROP SHIPPER/RESELLLER
-                </a>
+                <Link to="/list-product/dropshipper" className="link-hover">
+                  DROPSHIPPER/RESELLER
+                </Link>
               </li>
             </ul>
           </div>

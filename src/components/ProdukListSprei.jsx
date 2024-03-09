@@ -1,11 +1,10 @@
-import { data } from "../data/data";
 import { Link } from "react-router-dom";
 
-const ProductList = () => {
-  console.log(data);
+const ProductListSprei = ({dataSprei}) => {
+  console.log(dataSprei);
   return (
     <div className="grid grid-cols-2 medium:grid-cols-3 px-4 gap-5 mt-10 mb-10 ">
-      {data.map((items) => (
+      {dataSprei.map((items) => (
         <div key={items.id} className="w-full cursor-pointer relative">
           <div className="absolute flex items-center justify-center top-0 left-0 w-10 h-10 z-10 bg-red-500 rounded-full transform translate-y-[25px] ">
             <p className="text-white font-semibold text-sm">-55%</p>
@@ -34,4 +33,4 @@ const formatCurrency = (price) => {
   });
 };
 
-export default ProductList;
+export default ProductListSprei;
