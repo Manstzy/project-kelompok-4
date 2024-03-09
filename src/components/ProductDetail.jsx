@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const ProductDetail = () => {
   const [count, setCount] = useState(1);
+
   const increase = () => {
     setCount(count + 1);
   };

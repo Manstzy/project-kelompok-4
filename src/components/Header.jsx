@@ -14,10 +14,37 @@ import {
 import { useState } from "react";
 import LoginModal from "../components/organisms/LoginModal";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  selectTotalPrice,
+  selectTotalItems,
+  selectItems,
+  removeCart,
+  addItemsCart,
+} from "../redux/cart/cartSlice";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [isModalShow, setIsModalShow] = useState(false);
+  const [modal, setModal] = useState(false);
+  const totalPrice = useSelector(selectTotalPrice);
+  const totalItems = useSelector(selectTotalItems);
+  const Items = useSelector(selectItems);
+  const dispatch = useDispatch();
+
+  // console.log(Items)
+
+  const handleModal = () => {
+    setModal(!modal);
+  };
+
+  const handleRemoveCart = (product) => {
+    dispatch(removeCart(product));
+  };
+
+  const handleAddToCart = (product) => {
+    dispatch(addItemsCart(product));
+  };
 
   const handleMenu = () => {
     setMenu(true);
@@ -42,6 +69,7 @@ const Header = () => {
           ADD ANYTHING HERE OR JUST REMOVE IT...
         </strong>
       </div>
+
       <header className="header__master flex flex-wrap justify-center py-2 large:hidden sticky top-0 bg-opacity-90 bg-white z-20 ">
         <nav className="flex items-center justify-between px-[15px] ">
           <div className="burger cursor-pointer" onClick={handleMenu}>
@@ -211,12 +239,20 @@ const Header = () => {
             </a>
           </li>
           <li className="pl-3 hover:text-[hsla(0,0%,7%,.85)]">
-            <a href="" className="flex gap-2 items-center">
+            <div href="" className="flex gap-2 items-center">
               <p>
-                Keranjang / <span>Rp 0</span>
+                Keranjang / <span>Rp {totalPrice}</span>
               </p>
-              <BsCart className="w-6 h-6 text-[#ED1C24]" />
-            </a>
+              <div className="relative cursor-pointer">
+                <BsCart
+                  className="w-6 h-6 text-[#ED1C24] hover:text-red-500"
+                  onClick={handleModal}
+                />
+                <div className="bg-red-400 rounded-full text-white flex items-center justify-center absolute -top-1 -right-1 w-4 h-4 text-[12px]">
+                  {totalItems}
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -303,6 +339,47 @@ const Header = () => {
         </nav>
       </header>
       {/* DESKTOP HEADER END */}
+
+      {/* modal Keranjang */}
+      <div
+        className={
+          modal
+            ? "fixed z-50 w-[80%] p-10 right-0 left-0 top-0 bottom-0 my-auto h-[80%] bg-red-400 mx-auto rounded-lg"
+            : "hidden"
+        }
+      >
+        <div>
+          {Items.map((item) => (
+            <div key={item.id}>
+              <div className="flex gap-4">
+                <div className="mt-2">
+                  <img src={item.image} className="w-40 h-40" alt="" />
+                </div>
+                <div className="mt-2">
+                  <p className="font-semibold text-slate-700">{item.title}</p>
+                  <p className="">Rp. {item.totalPrice}</p>
+                  <p>Jumlah Barang : {item.quantity}</p>
+                  <div className="flex gap-4 mt-10 text-white">
+                    <button
+                      className="rounded-full bg-red-500 px-4 py-1"
+                      onClick={() => handleAddToCart(item)}
+                    >
+                      Tambah
+                    </button>
+                    <button
+                      className="rounded-full bg-red-500 px-4 py-1"
+                      onClick={() => handleRemoveCart(item)}
+                    >
+                      Kurang
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p onClick={handleModal}>Klose</p>
+      </div>
 
       {/* LOGIN MODAL START */}
       {isModalShow && (
